@@ -12,6 +12,7 @@ const render = require("./src/page-template.js");
 
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
+const companyEmployees = [];
 
 const managerQuestions = [
     {
@@ -92,3 +93,66 @@ const internQuestions = [
         name: "internSchool",
     },
 ];
+
+function optionPrompt() { 
+    console.log()
+    inquirer
+        .prompt(optionQuestion)
+        .then((response) => {
+            if (response.option === "Engineer") {
+              createEngineer();
+            } else if (response.option === "Intern") {
+              createIntern();
+            }
+            else {
+                if (!fs.existsSync(OUTPUT_DIR)) {
+                  fs.mkdirSync(OUTPUT_DIR);
+                };
+                fs.writeFile(outputPath, render(companyEmployees), (err) =>
+                  err ? console.log(err) : console.log("Employees Added")
+                );
+            };
+        });
+}
+
+function createManager() {
+    inquirer.prompt(managerQuestions).then((response) => {
+            companyEmployees.push(
+              new Manager(
+                response.managerName,
+                response.managerId,
+                response.managerEmail,
+                response.managerOfficeNumber
+              )
+            );
+        optionPrompt();
+    });
+};
+function createEngineer() {
+    inquirer.prompt(engineerQuestions).then((response) => {
+      companyEmployees.push(
+        new Engineer(
+          response.engineerName,
+          response.engineerId,
+          response.engineerEmail,
+          response.engineerGithub
+        )
+      );
+      optionPrompt();
+    });
+};
+function createIntern() {
+    inquirer.prompt(internQuestions).then((response) => {
+      companyEmployees.push(
+        new Intern(
+          response.internName,
+          response.internId,
+          response.internEmail,
+          response.internSchool
+        )
+      );
+      optionPrompt();
+    });
+};
+
+createManager();

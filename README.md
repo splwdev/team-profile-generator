@@ -83,24 +83,6 @@ The following image shows the output of the application:
 
 [![Product Name Screen Shot][product-screenshot]](https://splwdev.github.io/team-profile-generator)
 
-The Acceptance Criteria for this project was:
-
-* Create a weather dashboard with form inputs.
-  * When a user searches for a city they are presented with current and future conditions for that city and that city is added to the search history
-  * When a user views the current weather conditions for that city they are presented with:
-    * The city name
-    * The date
-    * An icon representation of weather conditions
-    * The temperature
-    * The humidity
-    * The wind speed
-  * When a user view future weather conditions for that city they are presented with a 5-day forecast that displays:
-    * The date
-    * An icon representation of weather conditions
-    * The temperature
-    * The humidity
-  * When a user click on a city in the search history they are again presented with current and future conditions for that city
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,7 +160,6 @@ Project Link: [https://github.com/splwdev/team-profile-generator](https://github
 
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [EDX Skills for Life Bootcamp](https://skillsforlife.edx.org/)
-* [Weather Icons](http://erikflowers.github.io/weather-icons/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -198,7 +179,7 @@ Project Link: [https://github.com/splwdev/team-profile-generator](https://github
 [license-url]: https://github.com/splwdev/team-profile-generator/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/shane-lynch-b28bb15
-[product-screenshot]: ./assets/images/10-server-side-apis-challenge-demo.png
+[product-screenshot]: ./assets/images/screenshot.png
 [HTML]: https://img.shields.io/badge/HTML-000000?style=for-the-badge
 [HTML-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [CSS]: https://img.shields.io/badge/css-DD0031?style=for-the-badge
